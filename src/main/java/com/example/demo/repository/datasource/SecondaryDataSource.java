@@ -23,6 +23,7 @@ public class SecondaryDataSource {
 	private String username;
 	private String password;
 	
+	// @Beanアノテーションのname引数に指定する名前は、クラス名と別名を指定すること。そうしないとアプリケーションサーバ（Tomcat等)の起動時にエラーが発生する。
 	@Bean(name="secondDataSource")
 	public DataSource createDataSource() {
 		return DataSourceBuilder
